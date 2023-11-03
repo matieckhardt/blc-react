@@ -26,3 +26,41 @@
     width: rem(40px);
   }
 }
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  position: relative;
+  flex: 0 0 100%;
+}
+
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.embla__dot {
+  width: 10px;
+  height: 10px;
+  background-color: #d8d8d8;
+  border-radius: 50%;
+  margin-right: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.embla__dot.is_selected {
+  background-color: #0168b6;
+}
