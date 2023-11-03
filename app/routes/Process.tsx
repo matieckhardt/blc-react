@@ -108,7 +108,7 @@ const items: Array<{
     left: "3vw",
     type: "icon",
     icon: "2",
-    inner: "Evaluacion de nivel y necesidades",
+    inner: "Evaluación de nivel y necesidades",
   },
   {
     name: "light",
@@ -124,7 +124,7 @@ const items: Array<{
     left: "21vw",
     type: "icon",
     icon: "4",
-    inner: "Asignacion de docentes y material",
+    inner: "Asignación de docentes y material",
   },
   {
     name: "chat",
@@ -135,7 +135,7 @@ const items: Array<{
     inner: "Monitoreo docente y feedback",
   },
   {
-    name: "analisys",
+    name: "analysis",
     top: "-34vw",
     left: "33.5vw",
     type: "icon",

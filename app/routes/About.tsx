@@ -7,7 +7,7 @@ export default function About() {
         <div className={classes.title}>Nosotros</div>
         <div>
           <div className={classes.circles}>
-            <div className={classes.red}> CONTENIDO GENERAL LINGUISTICO </div>
+            <div className={classes.red}> CONTENIDO GENERAL LINGÜISTICO </div>
             <div className={classes.violet}> CONTENIDO BUSSINESS</div>
             <div className={classes.green}>USO DEL IDIOMA</div>
           </div>

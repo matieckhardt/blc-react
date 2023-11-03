@@ -7,9 +7,10 @@ const classes = {
     display: "block",
     position: "relative" as const,
     width: "100vw",
-    height: "100%",
+
     paddingTop: "1vh",
-    backgroundColor: "transparent",
+
+    height: "auto", // Increase height when accordContainer grows
   },
   accordContainer: {
     display: "block",
@@ -17,6 +18,23 @@ const classes = {
     backgroundColor: "transparent",
     width: "60vw",
     height: "auto",
+    flexGrow: 1,
+  },
+  "@media (max-width: 1440px)": {
+    main: {
+      width: "90vw",
+    },
+    accordContainer: {
+      width: "90vw",
+    },
+  },
+  "@media (max-width: 1280px)": {
+    main: {
+      width: "90vw",
+    },
+    accordContainer: {
+      width: "80vw",
+    },
   },
 };
 

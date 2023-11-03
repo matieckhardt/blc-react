@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "../css/Accordion.module.css";
 const accordionData = [
   {
-    title: "CAPACITACION EN IDIOMAS",
+    title: "CAPACITACIÓN EN IDIOMAS",
     description: ` <strong>CURSOS REGULARES </strong><br />
 
 Con énfasis en la comunicación espontánea efectiva dentro de un marco curricular <br />
@@ -30,30 +30,29 @@ Como complemento de nuestros programas, los participantes tienen acceso exclusiv
     zIndex: 5,
   },
   {
-    title: "PREPARACION PARA EXAMENES INTERNACIONALES",
-    description: `Preparación para exámenes internacionales
+    title: "PREPARACIÓN PARA EXÁMENES INTERNACIONALES",
+    description: `
 De inglés general o de negocios, de español y de portugués según nivel de idioma de los participantes`,
     color: "#DD1E97", // MediumAquamarine
     zIndex: 4,
   },
   {
-    title: "DIAGNOSTICO DE DESEMPEÑO LINGUISTICO",
-    description: `Diagnóstico de desempeño lingüístico
+    title: "DIAGNÓSTICO DE DESEMPEÑO LINGUISTICO",
+    description: `
 A través de una evaluación integral de nivel de lengua, medimos los conocimientos lingüísticos y la capacidad de un candidato para comunicarse en su potencial puesto de trabajo.`,
     color: "#8D5BB5", // MediumPurple
     zIndex: 3,
   },
   {
-    title: "SERVICIO DE TRADUCCION Y SERVICIO DE INTERPRETACION",
+    title: "SERVICIO DE TRADUCCIÓN Y SERVICIO DE INTERPRETACIÓN",
     description: `Servicio de traducción y servicio de Interpretación (simultánea, consecutiva, susurro y simultánea remota (ISR)).
 Con altos estándares de precisión, nuestro equipo lidera proyectos de traducción o interpretación en variadas industrias o áreas técnicas`,
     color: "#83B58C", // Gold
     zIndex: 2,
   },
   {
-    title: "ASESORAMIENTO - AUDITORIA ACADEMICA",
-    description: `Asesoramiento – Auditoría Académica
-Junto con nuestros clientes, instrumentamos programas de idiomas alineados con las necesidades de la empresa, diseñamos políticas de seguimiento y procesos de monitoreo y reporting`,
+    title: "ASESORAMIENTO - AUDITORÍA ACADEMICA",
+    description: `Junto con nuestros clientes, instrumentamos programas de idiomas alineados con las necesidades de la empresa, diseñamos políticas de seguimiento y procesos de monitoreo y reporting`,
     color: "#9AB5CA", // DeepSkyBlue
     zIndex: 1,
   },

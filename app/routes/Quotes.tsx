@@ -114,7 +114,7 @@ export default function Quotes(props) {
   return (
     <div>
       <div className={classes.titles}>
-        <Title size={30} ta="center" c="#0168B6" p={2} w={"100vw"}>
+        <Title size={40} ta="center" c="#0168B6" fw={400} p={2} w={"100vw"}>
           NOS RECOMIENDAN
         </Title>
       </div>

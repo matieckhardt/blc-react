@@ -2,6 +2,7 @@
   --slide-spacing: 0rem;
   --slide-size: 100vw;
   --slide-height: 90vh;
+  min-height: 90vh; /* adjust this if necessary */
 }
 .embla__viewport {
   overflow: hidden;
@@ -49,4 +50,50 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.6rem;
+}
+
+.embla .blend-mix::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 50, 40, 0.25);
+  mix-blend-mode: normal;
+  filter: drop-shadow(1px 1px 2px rgb(0, 20, 130));
+}
+
+.caption {
+  max-width: 800px;
+  font-family: "Poppins";
+  line-height: 1.6;
+  color: white;
+  position: absolute;
+  top: 40vh;
+  left: 10vw;
+  font-size: 2.75rem;
+}
+.embla__dots {
+  position: absolute;
+  bottom: 10px; /* adjust as necessary */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2; /* space between dots */
+}
+
+.embla__dot {
+  width: 8px; /* adjust as necessary */
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border: none;
+  transition: background-color 0.3s;
+  bottom: 2%; /* adjust this percentage value to move the dots up or down */
+}
+
+.embla__dot.is-selected {
+  background-color: #333; /* adjust color for the selected dot */
 }

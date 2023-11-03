@@ -11,17 +11,43 @@ const numberWithinRange = (number: number, min: number, max: number): number =>
 
 type PropType = {
   slides: number[];
+  captions: string[];
   options?: EmblaOptionsType;
 };
 
-const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props;
+const Dots = ({ slides, selectedIndex, onClick }) => (
+  <div className="embla__dots">
+    {slides.map((_, index) => (
+      <button
+        key={index}
+        className={`embla__dot ${index === selectedIndex ? "is-selected" : ""}`}
+        type="button"
+        onClick={() => onClick(index)}
+        aria-label={`Go to slide ${index + 1}`}
+      />
+    ))}
+  </div>
+);
+
+const EmblaCarousel: React.FC<PropType> = ({ slides, captions, options }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     ...options,
     loop: true,
     duration: 120,
   });
   const [tweenValues, setTweenValues] = useState<number[]>([]);
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollTo = useCallback(
+    (index) => {
+      if (emblaApi) {
+        emblaApi.scrollTo(index);
+        setSelectedIndex(index);
+      }
+    },
+    [emblaApi]
+  );
 
   const onScroll = useCallback(() => {
     if (!emblaApi) return;
@@ -51,18 +77,32 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   useEffect(() => {
     if (!emblaApi) return;
 
+    const onScroll = () => {
+      // ... your existing onScroll logic
+    };
+
+    const onSelect = () => {
+      if (!emblaApi) return;
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+    };
+
     onScroll();
-    emblaApi.on("scroll", () => {
-      flushSync(() => onScroll());
-    });
+    emblaApi.on("scroll", onScroll);
+    emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onScroll);
 
     const autoplay = setInterval(() => {
       if (emblaApi) emblaApi.scrollNext();
     }, AUTOPLAY_DELAY);
 
-    return () => clearInterval(autoplay);
-  }, [emblaApi, onScroll]);
+    // Return the cleanup function
+    return () => {
+      clearInterval(autoplay);
+      emblaApi.off("scroll", onScroll);
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onScroll);
+    };
+  }, [emblaApi]);
 
   return (
     <div className="embla">
@@ -76,14 +116,22 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 ...(tweenValues.length && { opacity: tweenValues[index] }),
               }}
             >
-              <img
-                className="embla__slide__img"
-                src={imageByIndex(index)}
-                alt="Your alt text"
-              />
+              <div className="blend-mix">
+                <img
+                  className="embla__slide__img"
+                  src={imageByIndex(index)}
+                  alt={`Slide ${index}`}
+                />
+              </div>
+              <h2 className="caption">{captions[index]}</h2>
             </div>
           ))}
         </div>
+        <Dots
+          slides={slides}
+          selectedIndex={selectedIndex}
+          onClick={scrollTo}
+        />
       </div>
     </div>
   );

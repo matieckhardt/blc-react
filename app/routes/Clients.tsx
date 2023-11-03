@@ -14,12 +14,12 @@ export default function Clients() {
 
   return (
     <div className={classes.main} id="clients">
-      <Title align="center" color="#0168B6" p={2} pt={30} size={55}>
+      <Title ta="center" c="#0168B6" p={2} pt={30} size={55}>
         Nuestros Clientes
       </Title>
 
-      <Text align="center" color="#0168B6" p={2} size="1.3rem">
-        Desde hace mas de 30 años, hemos desarrolado soluciones para mas de xx
+      <Text ta="center" c="#0168B6" p={2} mt={20} size="1.3rem">
+        Desde hace mas de 30 años, hemos desarrolado soluciones para mas de 200
         empresas
       </Text>
 
