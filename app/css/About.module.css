@@ -1,0 +1,122 @@
+.main {
+  display: block;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #002a4b;
+}
+
+.title {
+  display: block;
+  position: relative;
+  height: 15vh;
+  width: 52vw;
+  background-color: #bbd7f3;
+  text-align: right;
+  border-radius: 0 0 85px 0;
+  color: #0168b6;
+  padding-right: 100px;
+  padding-top: 30px;
+  margin-bottom: 40px;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.content {
+  display: block;
+  position: relative;
+  height: 77vh;
+  width: 90vw;
+  background-color: white;
+  text-align: right;
+  border-radius: 0 0 85px 0;
+  color: #0168b6;
+}
+
+.circles {
+  display: block;
+  position: absolute;
+  width: 40vw;
+  padding: 50px;
+  margin-left: 0vw;
+}
+.red {
+  display: block;
+  position: relative;
+  background-color: rgba(224, 172, 213, 0.8);
+  height: 250px;
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -10%);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 70px;
+  padding-top: 90px;
+  border-radius: 80%;
+}
+
+.violet {
+  display: block;
+  position: relative;
+  background-color: rgba(201, 190, 222, 0.8);
+  height: 250px;
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 100%;
+  padding: 70px;
+  padding-top: 100px;
+}
+
+.green {
+  display: block;
+  position: relative;
+  background-color: rgba(197, 217, 211, 0.8);
+  height: 250px;
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(30%, -150%);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 100%;
+  padding: 70px;
+  padding-top: 100px;
+}
+
+.text {
+  display: block;
+  position: relative;
+  width: 35rem;
+  font-size: 1.3rem;
+  text-align: justify;
+  margin-left: 48vw;
+  padding-top: 3rem;
+  color: #3384c3;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1441) {
+  .content {
+    height: 47vh;
+    width: 90vw;
+  }
+
+  .circles {
+    width: 40vw;
+    padding: 50px;
+    margin-left: 0vw;
+  }
+}

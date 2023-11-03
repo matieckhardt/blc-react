@@ -1,0 +1,84 @@
+/* Process.css */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #002a4b;
+  height: 100vh;
+  padding: 5vw 18vw 0vw 18vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.chartContainer {
+  margin: 5vw 10vw;
+  position: relative;
+  width: 80%;
+  background-image: url("/icons/process/process1920.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon,
+.square {
+  width: 6vw;
+  height: 6vw;
+  border: 6px solid #0168b6;
+  background-color: white;
+  margin: 5px;
+  z-index: 10;
+  background-size: 3vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s;
+  position: relative;
+}
+
+.icon {
+  border-radius: 50%;
+  padding: 2rem;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  border-color: white;
+  border-width: 4px;
+}
+
+.icon:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: #0168b6;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.square {
+  border-radius: 20%;
+  padding: 1vw;
+}
+
+.square:hover {
+  transform: scale(1.1);
+  border-color: white;
+  border-width: 4px;
+}
+
+.square:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: #0168b6;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+}

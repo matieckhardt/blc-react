@@ -1,0 +1,57 @@
+/* Accordion.module.css */
+
+.main {
+  width: 100vw;
+  height: 90vh; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the accordion */
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+.accordion {
+  display: block;
+  position: relative;
+  top: 50px;
+  width: 60vw; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the accordion */
+  border-radius: 20px;
+}
+
+.layer {
+  transition: "0.3s";
+  color: white;
+  border: 0px #ccc;
+  border-radius: 35px;
+  margin-bottom: -75px;
+  height: auto;
+  padding: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative; /* Added position for z-index */
+  transition: background-color 0.1s ease-in-out, padding-bottom 0.5s ease-out; /* Transitions for background color and padding-bottom */
+}
+
+.layerTitle {
+  font-size: 1.9rem;
+  font-weight: 600;
+  text-align: center;
+  height: 60px;
+  padding-top: 10px;
+}
+
+.layerDescription {
+  text-align: left;
+
+  padding: 10px 100px;
+  overflow: hidden;
+  transition: padding-bottom 0.1s ease-out; /* Transition for padding-bottom */
+}
+
+.layer.active {
+  background-color: #f0f0f0; /* Color for active layer */
+  padding-bottom: 50px;
+}
+
+.layer.active .layerDescription {
+  padding-bottom: 50px; /* Adjust the padding bottom as needed */
+}

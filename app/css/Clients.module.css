@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  flex-direction: column;
+  height: auto;
+  width: 100vw;
+  background-color: white;
+}
+
+.clientsCar {
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+  width: 100vw;
+  height: 45vh;
+}
+
+.indicator {
+  background-color: #002a4b !important;
+  width: rem(12px);
+  height: rem(4px);
+  transition: width 250ms ease;
+
+  &[data-active] {
+    width: rem(40px);
+  }
+}
