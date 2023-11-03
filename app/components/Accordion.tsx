@@ -78,7 +78,7 @@ const Accordion = () => {
             style={{
               backgroundColor: item.color,
               zIndex: item.zIndex,
-              paddingTop: item.zIndex !== 5 ? "90px" : "50",
+              paddingTop: item.zIndex !== 5 ? "90px" : "50px", // Add 'px' to "50"
             }}
           >
             <div
@@ -90,7 +90,11 @@ const Accordion = () => {
             {activeLayer === index && (
               <div
                 className={styles.layerDescription}
-                style={{ fontSize: "1rem", fontFamily: "poppins, sans-serif" }}
+                style={{
+                  fontSize: "1rem",
+                  fontFamily: "poppins, sans-serif",
+                  maxHeight: activeLayer === index ? "500px" : "0", // Adjust max-height accordingly
+                }}
                 dangerouslySetInnerHTML={{ __html: item.description }}
               ></div>
             )}
